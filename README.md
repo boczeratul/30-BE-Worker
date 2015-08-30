@@ -10,8 +10,8 @@
 `PUT http://127.0.0.1:8080/30/topics/<id>`
 2. Update  
 `PUT http://127.0.0.1:8080/30/topics/<id> with If-Match header`  
-3. Find
-`GET http://127.0.0.1:8080/30/posts?filter={%22topic%22:%22TEST-1%22}&sort_by=-heat`
+3. Find  
+`GET http://127.0.0.1:8080/30/posts?filter={%22topic%22:%22TEST-1%22}&sort_by=-heat`  
 `GET http://127.0.0.1:8080/30/topics?sort_by=-heat`
 
 [RESTHeart API Docs](https://softinstigate.atlassian.net/wiki/display/RH/6.+API)
