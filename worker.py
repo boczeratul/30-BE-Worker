@@ -8,12 +8,12 @@ def main():
     classes.parseTopics(postDicts)
 
     topics = classes.topics
-    for topic in topics:
-        print topic._id + ' ' + str(topic.heat)
+    # for topic in topics:
+    #     print topic._id + ' ' + str(topic.heat)
 
     posts = classes.posts
-    for post in posts:
-        print post._id + ' ' + str(post.heat)
+    # for post in posts:
+    #     print post._id + ' ' + str(post.heat)
 
     database.setTopicCollection(topics)
     database.updatePostCollection(posts)

@@ -20,5 +20,4 @@ def getPostCollection():
 
 def updatePostCollection(posts):
     for post in posts:
-        print post._id + ' ' + str(post.heat)
         postColl.update_one({"_id": post._id}, {'$set': {"heat": post.heat, "topic": post.topic._id}})
