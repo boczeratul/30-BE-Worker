@@ -1,4 +1,5 @@
 import datetime
+import time
 import database
 import classes
 
@@ -20,8 +21,9 @@ def main():
 
         database.setTopicCollection(topics)
         database.updatePostCollection(posts)
-        
-        print str(datetime.time()) + ': processed database'
+
+        timestamp = int(time.time())
+        print '[' + str(datetime.datetime.fromtimestamp(timestamp)) + '] processed database'
         time.sleep(interval)
 
 if __name__ == "__main__":
