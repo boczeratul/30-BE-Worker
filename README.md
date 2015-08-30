@@ -1,9 +1,9 @@
 ## System Setup:
-1. MongoDB
-2. Java 
-3. RESTHeart
-4. python
-5. pymongo
+1. [MongoDB](http://docs.mongodb.org/manual/installation/) (Database)
+2. [Java 8](http://www.oracle.com/technetwork/java/javase/downloads/index.html) 
+3. [RESTHeart](https://github.com/SoftInstigate/RESTHeart/releases) (Web API for MongoDB)
+4. [python](https://www.python.org/downloads/) (Back-End Worker)
+5. [pymongo](http://api.mongodb.org/python/current/installation.html) (Back-End Worker)
 
 ## Web API:
 1. Insert  
