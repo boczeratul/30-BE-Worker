@@ -1,4 +1,4 @@
-import time
+import datetime
 import database
 import classes
 
@@ -20,6 +20,8 @@ def main():
 
         database.setTopicCollection(topics)
         database.updatePostCollection(posts)
+        
+        print str(datetime.time()) + ': processed database'
         time.sleep(interval)
 
 if __name__ == "__main__":
