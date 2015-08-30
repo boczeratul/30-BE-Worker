@@ -1,22 +1,26 @@
-import database
 import time
+import database
 import classes
 
-def main():  
-    # postDicts must be sorted according to create time
-    postDicts = database.getPostCollection().find()
-    classes.parseTopics(postDicts)
+interval = 5 * 60
 
-    topics = classes.topics
-    # for topic in topics:
-    #     print topic._id + ' ' + str(topic.heat)
+def main():
+    while True:
+        # postDicts must be sorted according to create time
+        postDicts = database.getPostCollection().find()
+        classes.parseTopics(postDicts)
 
-    posts = classes.posts
-    # for post in posts:
-    #     print post._id + ' ' + str(post.heat)
+        topics = classes.topics
+        # for topic in topics:
+        #     print topic._id + ' ' + str(topic.heat)
 
-    database.setTopicCollection(topics)
-    database.updatePostCollection(posts)
+        posts = classes.posts
+        # for post in posts:
+        #     print post._id + ' ' + str(post.heat)
+
+        database.setTopicCollection(topics)
+        database.updatePostCollection(posts)
+        time.sleep(interval)
 
 if __name__ == "__main__":
     main()
