@@ -3,7 +3,7 @@ import time
 import database
 import classes
 
-interval = 5 * 60
+interval = 1 * 60
 
 def main():
     while True:
