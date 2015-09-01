@@ -36,8 +36,9 @@ class Post:
         self.heat += heat
 
 class Topic:
-    def __init__(self, _id):
-        self._id = _id
+    def __init__(self, post):
+        self._id = post._id
+        self.timestamp = post.timestamp
         self.heat = 0
 
     def addHeat(self, heat):
@@ -62,7 +63,7 @@ def parseTopics(postDicts):
             topic = topicMap.get(post.parent_id)
             topicMap[post._id] = topic
         else:
-            topic = Topic(post._id)
+            topic = Topic(post)
             topics.append(topic)
             topicMap[post._id] = topic
 

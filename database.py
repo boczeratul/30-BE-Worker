@@ -11,6 +11,7 @@ def setTopicCollection(topics):
     for topic in topics:
         topicDoc = {
             "_id": topic._id,
+            "timestamp": topic.timestamp
             "heat": topic.heat
             }
         topicColl.insert_one(topicDoc)
