@@ -3,12 +3,12 @@ import time
 import database
 import classes
 
-interval = 1 * 60
+interval = 2 # seconds
 
 def main():
     while True:
         # postDicts must be sorted according to create time
-        postDicts = database.getPostCollection().find()
+        postDicts = database.getPostCollection().find().sort("_id", 1)
         classes.parseTopics(postDicts)
 
         topics = classes.topics
